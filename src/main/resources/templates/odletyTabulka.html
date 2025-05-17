@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Seznam odletů</title>
+</head>
+<body>
+    <h1>Odlety z letiště <span th:text="${letiste}"></span></h1>
+    <h2>V časech od <span th:text="${datetimeOd}"></span> do <span th:text="${datetimeDo}"></span></h2>
+    <!-- tlačítko pro vrácení na formulář -->
+    <a href="/formular"><button type="button">Zpět</button></a>
+
+    <!-- tabulka pro zobrazení odletů -->
+    <table border="1">
+        <tr>
+            <th>ICAO24</th>
+            <th>firstSeen</th>
+            <th>estDepartureAirport</th>
+            <th>lastSeen</th>
+            <th>estArrivalAirport</th>
+            <th>Callsign</th>
+            <th>estDepartureAirportHorizDistance</th>
+            <th>estDepartureAirportVertDistance</th>
+            <th>estArrivalAirportHorizDistance</th>
+            <th>estArrivalAirportVertDistance</th>
+            <th>departureAirportCandidatesCount</th>
+            <th>arrivalAirportCandidatesCount</th>
+        </tr>
+        <tr th:each="odlet : ${odlety}">
+            <td th:text="${odlet.icao24}"></td>
+            <td th:text="${odlet.firstSeen}"></td>
+            <td th:text="${odlet.estDepartureAirport}"></td>
+            <td th:text="${odlet.lastSeen}"></td>
+            <td th:text="${odlet.estArrivalAirport}"></td>
+            <td th:text="${odlet.callsign}"></td>
+            <td th:text="${odlet.estDepartureAirportHorizDistance}"></td>
+            <td th:text="${odlet.estDepartureAirportVertDistance}"></td>
+            <td th:text="${odlet.estArrivalAirportHorizDistance}"></td>
+            <td th:text="${odlet.estArrivalAirportVertDistance}"></td>
+            <td th:text="${odlet.departureAirportCandidatesCount}"></td>
+            <td th:text="${odlet.arrivalAirportCandidatesCount}"></td>
+        </tr>
+    </table>
+    <a href="/"><button type="button">Zpět</button></a>
+</body>
+</html>

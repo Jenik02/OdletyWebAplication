@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="ApiOdlety" content="width=device-width, initial-scale=1.0">
+    <title>ApiOdlety</title>
+</head>
+<body>
+    <h1>Formulář pro hledání odletů</h1>
+    <h2>Vyhledávání letů podle letiště a časového rozmezí</h2>
+
+    <!-- tlačítko pro vrácení na úvodní stránku -->
+    <a href="/"><button type="button">Zpět na domovskou stránku</button></a>
+    
+    <!-- formulář pro zadání letiště a časového rozmezí -->
+    <form action="/odlety" method="get">
+        <input type="text" name="letiste" placeholder="Zadejte nazev letiste">
+        <input type="datetime-local" name="datetimeZacatek" placeholder="Zadejte pocatecni datum">
+        <input type="datetime-local" name="datetimeKonec" placeholder="Zadejte konecne datum">
+        <input type="submit" value="Zobrazit odlety">
+    </form>
+    
+</body>
+</html>
