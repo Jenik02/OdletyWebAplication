@@ -19,19 +19,19 @@ public class OdletyController {
     private OdletyService odletyService;
 
     //při prázdné url se zobrazí index.html s formulářem pro odlety jako úvodní stránka
-    @GetMapping("/")
+    @GetMapping("/api/")
     public String index() {
         return "index";
     }
 
     //url pro zobrazení formuláře
-    @GetMapping("/formular")
+    @GetMapping("/api/formular")
     public String strankaFormulare() {
         return "formular";
     }
     
     //url pro zobrazení tabulky s odlety vraci pole datovych struktur(jednotlive odlety)
-    @GetMapping("/odlety/url")
+    @GetMapping("/api/odlety/url")
     @ResponseBody
     public Odlety[] getMethodName(@RequestParam String letiste, @RequestParam String casZacatek, @RequestParam String casKonec) {
         
@@ -53,7 +53,7 @@ public class OdletyController {
 
 
     // metoda pro získáni odletů a přiřazeni je modelu(dále zobrazeném v odletyTabulka.html)
-    @GetMapping("/odlety")
+    @GetMapping("/api/odlety")
     public String vratOdlety(
     @RequestParam String letiste,
     @RequestParam String datetimeZacatek,

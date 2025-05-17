@@ -7,7 +7,7 @@
     <h1>Odlety z letiště <span th:text="${letiste}"></span></h1>
     <h2>V časech od <span th:text="${datetimeOd}"></span> do <span th:text="${datetimeDo}"></span></h2>
     <!-- tlačítko pro vrácení na formulář -->
-    <a href="/formular"><button type="button">Zpět</button></a>
+    <a href="/api/formular"><button type="button">Zpět</button></a>
 
     <!-- tabulka pro zobrazení odletů -->
     <table border="1">
@@ -40,6 +40,6 @@
             <td th:text="${odlet.arrivalAirportCandidatesCount}"></td>
         </tr>
     </table>
-    <a href="/"><button type="button">Zpět</button></a>
+    <a href="/api/"><button type="button">Zpět</button></a>
 </body>
 </html>

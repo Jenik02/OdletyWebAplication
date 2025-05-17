@@ -2,7 +2,7 @@ RESTfulWebApi – Odlety letadel z letiště
 
 Tato aplikace umožňuje zobrazit seznam odletů z konkrétního letiště za zvolené časové období. Data jsou získávána z veřejného API OpenSky Network.
 
-dependencies pro pom.xml získávána z: maven central repository
+dependencies pro pom.xml přidávány z: maven central repository
 https://central.sonatype.com/
 
 Technologie
@@ -13,11 +13,11 @@ Maven
 Thymeleaf
 Caffeine
 
+fungování na portu: 8080
 
-URL: `/api/odlety?letiste=XXXX&casKonec=RRRRMMDDHHMM&casZacatek=RRRRMMDDHHMM`
-napriklad 'http://localhost:8080/odlety/url?letiste=EDDF&casZacatek=202505160400&casKonec=202505170400'
+zpracovaná URL: `/api/odlety?letiste=XXXX&casKonec=RRRRMMDDHHMM&casZacatek=RRRRMMDDHHMM`
 Vrací JSON seznam odletů z daného letiště za časový interval.
-K otestování například: §
+K otestování například: 'http://localhost:8080/api/odlety/url?letiste=EDDF&casZacatek=202505160400&casKonec=202505170400'
 
 
 Pomocí HTML formuláře pro výběr letiště a časového rozmezí, 
